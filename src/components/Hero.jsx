@@ -6,7 +6,7 @@ const Hero = () => {
       {/* Left side (Text Content) */}
       <div className="mb-10 md:mb-0 md:w-1/2 md:pr-10 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-2 leading-tight font-serif" style={{ fontFamily: 'Playfair Display, serif' }}>
-          Monish Yedlewar
+          Sudhanshu Mishra
         </h1>
         <div className="text-2xl text-gray-800 mb-4">FULL STACK DEVELOPER</div>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
