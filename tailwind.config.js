@@ -9,10 +9,9 @@ module.exports = {
         'blue-900': '#001a33', // Add a darker blue for the gradient
       },
       fontFamily: {
-       
         'playfair-display': ['Playfair Display', 'serif'],
       },
     },
   },
   plugins: [],
-}
+};

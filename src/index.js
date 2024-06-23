@@ -5,7 +5,11 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Experience from './components/Experience'
+import Experience from './components/Experience';
+import Project from './components/Project';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +19,9 @@ root.render(
     <About/>
     <Skills/>
     <Experience/>
+    <Project/>
+      <ContactUs/>
+      <Footer/>
    
   </React.StrictMode>
 );
