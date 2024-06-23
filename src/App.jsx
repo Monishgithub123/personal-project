@@ -1,21 +1,24 @@
-// src/App.js
-import './index.css';
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Project from './components/Project';
+import About from './components/About';
+import Skills from './components/Skills';
+import Experience from './components/Experience'
+import Project from './components/Project'
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
-
 
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-       <Project/> 
-      <ContactUs />
-      <Footer />
+      <Header/>
+      <Hero/>
+      <About/>
+      <Skills/>
+      <Experience/>
+      <Project/>
+      <ContactUs/>
+      <Footer/>
     </div>
   );
 }
