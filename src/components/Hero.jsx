@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="bg-gray-300 py-12 px-4 sm:px-6 lg:py-24 lg:px-8 flex flex-col md:flex-row items-center justify-center">
       {/* Left side (Text Content) */}
-      <div className="mb-10 md:mb-0 md:w-1/2 md:pr-10 text-center md:text-left">
+      <div className="md:w-1/2 md:pr-10 text-center md:text-left">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-2 leading-tight font-serif" style={{ fontFamily: 'Playfair Display, serif' }}>
          Monish Yedlewar🤞
         </h1>
