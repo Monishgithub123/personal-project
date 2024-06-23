@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Header() {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -8,13 +8,14 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-navy-blue text-white p-4 lg:p-6 shadow-lg">
+    <header className="bg-gradient-to-r from-blue-900 to-teal-500 text-white py-3 px-4 shadow-lg">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between">
-        <div className="flex items-center justify-between w-full lg:w-auto mb-4 lg:mb-0">
+        <div className="flex items-center justify-between w-full lg:w-auto">
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none transform transition-transform duration-300"
+              aria-label="Toggle Menu"
             >
               <svg
                 className={`h-8 w-8 transform transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}
@@ -32,50 +33,30 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          {/* Logo (Replace with your actual logo image) */}
           <img
-            src="./1145.jpg"
+            src="/1145.jpg"
             alt="Logo"
-            className="h-14 w-14 lg:h-16 lg:w-16 rounded-full border-2 border-white shadow-sm lg:ml-0 ml-auto"
+            className="h-12 w-12 lg:h-14 lg:w-14 rounded-full border-2 border-white shadow-sm ml-auto lg:ml-0"
           />
         </div>
         <nav
           className={`${
             isOpen ? 'block' : 'hidden'
-          } lg:flex lg:items-center lg:space-x-6 text-lg w-full lg:w-auto`}
+          } lg:flex lg:items-center lg:space-x-4 text-lg w-full lg:w-auto`}
         >
-          <a
-            href="#home"
-            className="nav-link block py-2 px-4 lg:px-6 text-2xl font-semibold hover:text-gray-300 transition-colors duration-300"
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="nav-link block py-2 px-4 lg:px-6 text-2xl font-semibold hover:text-gray-300 transition-colors duration-300"
-          >
-            About
-          </a>
-          <a
-            href="#resume"
-            className="nav-link block py-2 px-4 lg:px-6 text-2xl font-semibold hover:text-gray-300 transition-colors duration-300"
-          >
-            Resume
-          </a>
-          <a
-            href="#projects"
-            className="nav-link block py-2 px-4 lg:px-6 text-2xl font-semibold hover:text-gray-300 transition-colors duration-300"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="nav-link block py-2 px-4 lg:px-6 text-2xl font-semibold hover:text-gray-300 transition-colors duration-300"
-          >
-            Contact
-          </a>
+          {['Home', 'About', 'Experience', 'Projects', 'Contact'].map((section) => (
+            <a
+              key={section.toLowerCase()}
+              href={`#${section.toLowerCase()}`}
+              className="block py-2 px-3 lg:px-4 text-lg lg:text-xl font-semibold hover:text-gray-300 hover:underline transition-colors duration-300 transform hover:scale-105"
+            >
+              {section}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
   );
-}
+};
+
+export default Header;
